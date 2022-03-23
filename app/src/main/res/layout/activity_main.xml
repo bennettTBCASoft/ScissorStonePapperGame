@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ed_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Please Enter Your Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="請輸入名子已開始遊戲"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/ed_name"
+        app:layout_constraintStart_toStartOf="@id/ed_name"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/group_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_text"
+        app:layout_constraintStart_toStartOf="@id/tv_text"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/btn_scissor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="剪刀"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/btn_stone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="石頭" />
+
+        <RadioButton
+            android:id="@+id/btn_paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="布" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_mora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="猜拳"
+        app:layout_constraintTop_toBottomOf="@id/group_radio_button"
+        app:layout_constraintStart_toStartOf="@id/group_radio_button"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="名字"
+        app:layout_constraintTop_toBottomOf="@id/btn_mora"
+        app:layout_constraintStart_toStartOf="@id/btn_mora"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="勝利者"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        android:layout_marginStart="20dp"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_mmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我方出拳"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/tv_winner"
+        android:layout_marginStart="20dp"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_cmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="電腦出拳"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/tv_mmora"
+        android:layout_marginStart="20dp"
+        android:textSize="18sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
